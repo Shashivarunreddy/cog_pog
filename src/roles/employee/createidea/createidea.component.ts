@@ -10,6 +10,7 @@ import { RouterModule, Router } from '@angular/router';
 import { IdeaService } from '../../../services/idea.service';
 import { AuthService } from '../../../services/auth.service';
 import { UserRole ,Category} from '../../../models/model';
+import { CategoryService } from '../../../services/category.service';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class CreateideaComponent implements OnInit {
     private fb: FormBuilder,
     private ideaService: IdeaService,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
     private categoryService: CategoryService
   ) {
     this.form = this.fb.group({
