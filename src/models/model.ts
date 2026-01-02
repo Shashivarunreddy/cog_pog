@@ -23,7 +23,7 @@ export interface Idea {
   categoryID: number;
   submittedByUserID: number;
   submittedDate: string;
-  status: 'Draft' | 'UnderReview' | 'Approved';
+  status: 'Rejected' | 'UnderReview' | 'Approved';
   category?: string;
   upvotes?: number;
   downvotes?: number;  
