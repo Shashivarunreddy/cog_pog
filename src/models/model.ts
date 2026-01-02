@@ -1,5 +1,3 @@
-import e from "express";
-
 export enum UserRole {
   ADMIN = 'admin',
   EMPLOYEE = 'employee',
@@ -76,7 +74,7 @@ export interface Category {
   createdDate: string;
   relatedIdeaID?: number;
   relatedUserName?: string;
- 
+
 }
 
 export interface Category {
