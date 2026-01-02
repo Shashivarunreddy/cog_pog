@@ -117,7 +117,7 @@ export class IdeaService {
     if (review.decision === 'Approve') {
       this.setIdeaStatus(review.ideaID, 'Approved');
     } else {
-      this.setIdeaStatus(review.ideaID, 'Draft');
+      this.setIdeaStatus(review.ideaID, 'Rejected');
     }
 
     return review;
@@ -129,7 +129,7 @@ export class IdeaService {
       .sort((a, b) => (a.reviewID || 0) - (b.reviewID || 0));
   }
 
-  setIdeaStatus(ideaID: number, status: 'Draft' | 'UnderReview' | 'Approved') {
+  setIdeaStatus(ideaID: number, status: 'Rejected' | 'UnderReview' | 'Approved') {
     const ideas = this.ideas$.value.slice();
     const idx = ideas.findIndex((i) => i.ideaID === ideaID);
     if (idx >= 0) {

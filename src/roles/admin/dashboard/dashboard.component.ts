@@ -64,7 +64,7 @@ export class DashboardComponent implements OnInit {
     // Load ideas
     this.ideaService.getAllIdeas().subscribe((ideas) => {
       this.totalIdeas = ideas.length;
-      this.draftIdeas = ideas.filter((i) => i.status === 'Draft').length;
+      this.draftIdeas = ideas.filter((i) => i.status === 'Rejected').length;
       this.underReviewIdeas = ideas.filter((i) => i.status === 'UnderReview').length;
       this.approvedIdeas = ideas.filter((i) => i.status === 'Approved').length;
 
