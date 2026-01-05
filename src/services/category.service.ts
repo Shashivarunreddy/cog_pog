@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Category} from '../models/model';
+import { Category } from '../models/model';
 
 const CATEGORIES_KEY = 'categories';
 
@@ -22,7 +22,7 @@ export class CategoryService {
         const raw = window.localStorage.getItem(key);
         return raw ? JSON.parse(raw) : [];
       }
-    } catch { }
+    } catch {}
     return [];
   }
 
@@ -35,7 +35,7 @@ export class CategoryService {
       ) {
         window.localStorage.setItem(key, JSON.stringify(data));
       }
-    } catch { }
+    } catch {}
   }
 
   private readCategories(): Category[] {
@@ -156,7 +156,7 @@ export class CategoryService {
         },
         {
           name: 'Other',
-          description: 'Miscellaneous ideas that don\'t fit other categories',
+          description: "Miscellaneous ideas that don't fit other categories",
           icon: '📌',
           color: '#6B7280',
         },
