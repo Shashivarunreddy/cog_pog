@@ -57,7 +57,7 @@ export interface Vote {
 export interface Notification {
   notificationID: number;
   userID: number;
-  type: 'NewIdea' | 'ReviewDecision' | 'NewComment' | 'NewVote'|'NewComment'
+  type: 'NewIdea' | 'ReviewDecision' | 'NewComment';
   message: string;
   status: 'Unread' | 'Read';
   createdDate: string;
@@ -75,7 +75,6 @@ export interface Category {
   createdDate: string;
   relatedIdeaID?: number;
   relatedUserName?: string;
-
 }
 
 export interface Category {
@@ -94,3 +93,4 @@ export interface Report{
   metrics : 'ideasSubmitted' | 'approvedIdeas' | 'participationCount';
   generatedDate: string;
 }
+
