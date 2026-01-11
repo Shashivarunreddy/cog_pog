@@ -88,3 +88,9 @@ export interface Category {
   createdDate: string;
 }
 
+export interface Report{
+  reportID : number;
+  scope?: 'Department' | 'Category' | 'Period';
+  metrics : 'ideasSubmitted' | 'approvedIdeas' | 'participationCount';
+  generatedDate: string;
+}

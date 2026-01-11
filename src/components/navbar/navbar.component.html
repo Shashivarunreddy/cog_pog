@@ -53,6 +53,14 @@
           >Manage Users</a
         >
       </li>
+      <li *ngIf="isAdmin()">
+        <a
+          routerLink="/admin/reports"
+          routerLinkActive="font-semibold text-white"
+          class="text-(--blue-100) hover:text-white transition-colors"
+          >Reports</a
+        >
+      </li>
 
       <li *ngIf="isEmployee()">
         <a
